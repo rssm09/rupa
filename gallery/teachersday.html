@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15th August 2025 | Gallery</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>15th August 2025 Celebration</h1>
+    <a href="../index.html#gallery" style="color:#ffd700;">← Back to Gallery</a>
+  </header>
 
+  <section class="gallery">
+    <img src="../images/indi2.jpg" alt="Flag Hoisting" width="400" height="300">
+    <img src="../images/indipen.png" alt="Independence Day" width="400" height="300">
+    <img src="../images/the g.png" alt="Cultural Program" width="400" height="300">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rupa Saraswati Sishu Mandir</p>
+  </footer>
+  <!-- Lightbox Popup -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const close = document.querySelector('.close');
+  const images = document.querySelectorAll('.gallery img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  close.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
