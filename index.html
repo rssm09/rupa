@@ -137,17 +137,38 @@
   </section>
 
   <section id="notice" class="notice-section">
-    <h2>Notice Board</h2>
-    <div class="notice-board">
-      <ul>
-        <li>🎉 Annual Function Invitation Card is live Now .<a href="images/invitation card.jpg" target="_blank">[Download]</a></li>
-        <li>📢 Admission forms  are available . <a href="pdfs/Admission form.pdf" target="Admission form.pdf">[Download PDF]</a></li>
-      <!--  <li>🏆 Sports Day scheduled for 20th Oct 2025. <a href="pdfs/sports-day.pdf" target="_blank">[View]</a></li>
+  <h2>Notice Board</h2>
+  <div class="notice-board">
+    <ul>
+      <!-- View only -->
+      <li>🎉 Annual Function Invitation Card is live Now. 
+        <a href="images/invitation card.jpg" target="_blank">[View]</a>
+      </li>
+
+      <!-- Download directly -->
+      <li>📢 Admission forms are available. 
+        <a href="#" onclick="downloadFile('pdfs/Admission form.pdf')">[Download PDF]</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<script>
+function downloadFile(filePath) {
+  const link = document.createElement('a');
+  link.href = filePath;
+  link.download = 'Admission form.pdf';  // exact file name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+
+  <!--  <li>🏆 Sports Day scheduled for 20th Oct 2025. <a href="pdfs/sports-day.pdf" target="_blank">[View]</a></li>
         <li>📚 Parent-Teacher meeting on 5th Nov 2025. <a href="pdfs/parent-meet.pdf" target="_blank">[Details]</a></li>
         -->
-      </ul>
-    </div>
-  </section>
+
 
   <section id="management">
     <h2>Management</h2>
